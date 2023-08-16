@@ -12,7 +12,7 @@ class DecimalTextInputFormatter extends TextInputFormatter {
 
   @override
   TextEditingValue formatEditUpdate(
-    TextEditingValue oldValue, // unused.
+    TextEditingValue oldValue,
     TextEditingValue newValue,
   ) {
     TextSelection newSelection = newValue.selection;
@@ -37,9 +37,9 @@ class DecimalTextInputFormatter extends TextInputFormatter {
 
     if (number != null) {
       if (number < min) {
-        truncated = min.toStringAsFixed(decimalRange!);
+        truncated = min.toStringAsFixed(decimalRange);
       } else if (number > max) {
-        truncated = max.toStringAsFixed(decimalRange!);
+        truncated = max.toStringAsFixed(decimalRange);
       }
     }
 
